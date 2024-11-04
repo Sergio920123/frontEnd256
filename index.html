@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Edema Books</title>
+</head>
+<body>
+        <div class="logo">
+             <img src="IMG/logo-edema2.png" alt="">
+        </div>
+        <header class="navBarContainer">
+            <div class="navegacion">
+                <a href="index.html">Home</a>
+                <a href="libros.html">Libros</a>
+                <a href="prestamos.html">Prestamo</a>
+                <a href="clientes.html">Base de Datos Clientes</a>                 
+                <a href="contacto.html">Contacto</a>  
+            </div>
+    </header>   
+    <div class="imgPromos">
+        <div class="promo-1"><img src="IMG/promocion.png" alt=""></div>
+    </div>
+ 
+    <div class="botonesImportantes">
+        <button onclick="window.location.href='recomendados2.html'">Ebooks Recomendados</button>  
+        <button onclick="window.location.href='recomendados3.html'">AudioLibros Recomendados</button>       
+      
+       
+    </div>
+
+
+    <div class="nuestrosRecomendados">
+       <p>NUESTROS LIBROS RECOMENDADOS</p> 
+    </div>
+
+    <div class="containerLibros">
+        <div class="subContainerLibros">
+            <div class="cardLibro">
+                <div class="imagenLibro">
+                    <a href="recomendados1.html">
+                        <img src="IMG/5.jpg" alt="">
+                        <p class="tituloLibro">The call of cthulhu</p>
+                        <p class="autorLibro">h.p. lovecraft</p>
+                        <p class="Precio">100.000</p> 
+                    </a>
+               </div>            
+            </div>
+
+            <div class="cardLibro">
+                <div class="imagenLibro">
+                    <a href="recomendados2.html">
+                        <img src="IMG/4.jpg" alt="">
+                        <p class="tituloLibro">The wise man´s fear</p>
+                        <p class="autorLibro">Patrick Rothfuss</p>
+                        <p class="Precio">150.000</p> 
+                    </a>
+               </div>            
+            </div>
+
+            <div class="cardLibro">
+                <div class="imagenLibro">
+                    <a href="recomendados3.html">
+                        <img src="IMG/3.jpg" alt="">
+                        <p class="tituloLibro">La Voz de las espadas</p>
+                        <p class="autorLibro">Joe Abercrombie</p>
+                        <p class="Precio">130.000</p> 
+                    </a>
+               </div>            
+            </div>
+
+            <div class="cardLibro">
+                <div class="imagenLibro">
+                    <a href="recomendados4.html">
+                        <img src="IMG/11.jpg" alt="">
+                        <p class="tituloLibro">Trilogía de la Fundación</p>
+                        <p class="autorLibro">Isaac Asimov</p>
+                        <p class="Precio">200.000</p> 
+                    </a>
+               </div>            
+            </div>
+        
+        </div>
+    </div>
+
+
+    <div class="containerSubscripcion">
+        <div class="arreglosFormulario">
+            <p class="tituloSubscripcion">
+                ¡Únete a nosotros! Donde los libros, el café y la amistad se encuentran
+            </p>
+            <p class="explicacionSubscripcion">
+                Regístrate para recibir descuentos exclusivos, novedades de tus géneros favoritos y beneficios que te harán sonreír.
+            </p>
+            
+            <div class="formularioSubscripcion">
+
+                <form class="contenedorFormulario" action="" method="POST">
+                    
+       
+                    <div class="formA">
+                        <div class="formSergio">            
+                            <label for="nombres-n">Nombres</label>
+                            <input type="text" class="form-control" id="nombres-n" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="apellidos-a">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos-a" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="telefono-t">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono-t" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="email-e">Email</label>
+                            <input type="email" class="form-control" id="email-e" required>
+                        </div>
+                    </div>
+                    
+             
+                    <div class="formA">
+                        <div class="formSergio">
+                            <label for="fecha_de_nacimiento-f">Fecha de Nacimiento</label>
+                            <input type="date" class="form-control" id="fecha_de_nacimiento-f" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="genero_literario_favorito-g">Género Literario Favorito</label>
+                            <input type="text" class="form-control" id="genero_literario_favorito-g" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="ciudad-c">Ciudad</label>
+                            <input type="text" class="form-control" id="ciudad-c" required>
+                        </div>
+                        <div class="formSergio">
+                            <label for="direccion-d">Dirección</label>
+                            <input type="text" class="form-control" id="direccion-d" required>
+                        </div>                    
+                    </div>
+                    <div class="botonEnviar">
+                        <button type="button" class="button" onclick="guardarClientes()">Enviar</button>                    
+                    </div>
+                
+                    
+                </form>
+            </div>
+        </div>
+    
+       
+        <div class="imagenSubscripcion"></div>   
+    </div>   
+
+    <script src="js/request.js"></script> <!-- se LLama las funciones js-->
+    <script src="js/clientes.js"></script>
+    <script>
+        window.onload = function () {
+            let boton = document.getElementById('btn-editar');
+            const url = new URLSearchParams(window.location.search);
+            cargarDatos(url.get('id'));
+            boton.onclick = () => {
+                modificarClientes(url.get('id'));
+            }
+        }        
+    </script>
+
+<!--INICIA FOOTER-->
+<footer>
+    <div class="containerfooter">
+        <div class="mainfooter">
+
+            <div class="imagenfooter"> <img src="IMG/logo-edema2.png" alt=""></div>
+            
+            <div class="infoFooter">
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter1 .png" alt="" >            
+                    <p> callle 125 #12 - 28</p>
+                </div>
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter2.png" alt="" >            
+                    <p>+57 546 30 23</p>
+                </div>
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter3.png" alt="" >            
+                    <p>edemabooks@gmail.com</p>
+                </div>
+              
+            </div>          
+
+            <div class="realizadoPor">                      
+                <a href="https://www.behance.net/sergiosanchez2392" target="_blank"> <img src="IMG/Sergio_avatar2.jpg" alt=""></a>                                
+                <a href="https://youtube.com/@sergiosanchez3707?feature=shared" target="_blank"><img src="IMG/redes__S4.png"></a>                 
+                <a href="https://www.linkedin.com/in/sersan92" target="_blank"><img src="IMG/redes__S7.png"></a>             
+       
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--TERMINA FOOTER-->
+</body>
+
+</html>

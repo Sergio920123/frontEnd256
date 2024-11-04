@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="prestamos.css">
+    <title>Edema Books</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="IMG/logo-edema2.png" alt="">
+    </div>
+
+    <header class="navBarContainer">
+        <div class="navegacion">
+            <a href="index.html">Home</a>
+            <a href="libros.html">Libros</a>
+            <a href="prestamos.html">Prestamo</a>
+            <a href="clientes.html">Base de Datos Clientes</a>                 
+            <a href="contacto.html">Contacto</a>  
+        </div>
+</header>> 
+    <div class="imgPromos">
+        <div class="promo-1"><img src=" " alt=""></div>
+    </div>
+    
+    <div class="contenedorCabezalLibros">
+        <p class="introSecLibros">Navega en nuestra selección de libros disponibles para préstamo y surca infinitas olas de párrafos y letras.</p>
+        <p class="TextoIntroLibros">Disfruta de mil aventuras sin gastar un centavo y sumérgete en historias que te
+            transportarán a mundos increíbles, donde cada página es una nueva experiencia. Pero ten en cuenta que estas
+            joyas literarias son frágiles y valiosas. Si alguna de ellas resulta dañada, no solo perderás la oportunidad
+            de volver a leerlas, sino que también deberás enfrentar las consecuencias. Así que cuídalas, o prepárate
+            para caminar por la tabla "yarr".</p>
+        <p class="fraseMotivLibros">“"Un libro es un sueño que sostienes en tus manos."”</p>
+        <p class="autorFrase"> George R.R. Martin.</p>
+    </div>  
+
+    <!--INICIA FORMULARIO -->
+
+    <div class="contenedorTabla">
+
+        <div class="intruccionesTabla">
+
+            <p class="tituloInstruciones">Instruciones del Formulario</p>
+            <div class="textoInstruciones">
+            <p>Este formulario está diseñado para consultar, editar y guardar datos de los libros que han sido prestados a nuestros clientes.</p>
+            <p><b>Te recomendamos seguir las siguientes instrucciones:</b></p>
+            <p><b>1.</b>Llena los datos del formulario de acuerdo con su título; En los apartados de <i>"teléfono y documento"</i>, solo podrás incluir números.</p>
+            <p><b>2.</b>Por favor, verifica el <i> "correo electrónico, la dirección y la ciudad"</i>.</p>
+            <p><b>3.</b>En el apartado <i>Titulo en prestamo</i> rectifica que el titulo coincida con el del libro en préstamo.</p>
+            <p><b>4.</b>El formato de la <i>Fecha de Prestamo y Fecha de Entrega </i>es: <b>Día, Mes, Año</b>.</p>
+            <p><b>5.</b>En el apartado <i>¿Se entregó el libro?</i>,<b>SOLO</b> ingresar:<b>(si o no)</b> según corresponda.</p>
+            <p><b>6.</b>En el apartado <i> Estado del Prestamo</i>,<b>SOLO</b> ingresar:<b>(activo, finalizado, atrasado)</b> según corresponda.</p>
+            <p><b>7.</b>Utiliza el botón <i>"Guardar"</i> <b>SOLO</b> para ingresarun nuevo usuario al sistema.</p>
+            <p><b>8.</b>Si necesitas actualizar la información de un cliente existente, utiliza <b>SOLO</b> el botón<i>"Editar"</i> para guardar los cambios.</p>
+            </div>
+            
+        </div>
+        <form class="contenedorFormulario" action="" onsubmit="" method="POST">
+            <div class="mb-3">
+                <label for="nombres-n">Nombres</label>
+                <input type="text" class="form-control" id="nombres-n" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="apellidos-a">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos-a" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="documento-do">Documento</label>
+                <input type="number" class="form-control" id="documento-do" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email-e">Email</label>
+                <input type="email" class="form-control" id="email-e" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefono-t">Teléfono</label>
+                <input type="number" class="form-control" id="telefono-t" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="direccion-d">Dirección</label>
+                <input type="text" class="form-control" id="direccion-d" required>
+            </div>
+        </form>
+
+        <form class="contenedorFormulario" action="" onsubmit="" method="POST">
+
+            <div class="mb-3">
+                <label for="tituloPrestamo-ti">Titulo en Prestamo</label>
+                <input type="text" class="form-control" id="tituloPrestamo-ti" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDePrestamo-f">Fecha de Prestamo</label>
+                <input type="date" class="form-control" id="fechaDePrestamo-f" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="fechaDeEntrega-fe">Fecha de Entrega</label>
+                <input type="date" class="form-control" id="fechaDeEntrega-fe" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="entregaLibro-el">¿Se entregó el libro?</label>
+                <input type="text" class="form-control" id="entregaLibro-el" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="estadoPrestamo-ep">Estado del Prestamo</label>
+                <input type="text" class="form-control" id="estadoPrestamo-ep" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="ciudad-c">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad-c" required>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="btnAgregaryEditar">
+        <button type="button" class="formularioCientesBtnAgregar" onclick="guardarPrestamos()">Guardar</button>
+        <button type="button" class="formularioCientesBtnAgregar" id="btn-editar">Editar</button>
+    </div>
+    <!--TERMINA FORMULARIO-->
+
+    <!--INICIA TABLA-->
+
+    <section class="container">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th class="colum">Nombres</th>
+                    <th class="colum">Apellidos</th>
+                    <th class="colum">Documento</th>
+                    <th class="colum">Email</th>
+                    <th class="colum">Teléfo</th>
+                    <th class="colum">Direccion</th>
+                    <th class="colum">Titulo en prestamo</th>
+                    <th class="colum">Fecha de Prestamo</th>
+                    <th class="colum">Fecha de Entrega</th>
+                    <th class="colum">¿Se entregó el libro?</th>
+                    <th class="colum">Estado del Prestamo</th>
+                    <th class="colum">Ciudad</th>
+                    <th class="colum">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="prestamos-table">
+
+            </tbody>
+        </table>
+        
+        <!--termina TABALA PRESTAMOS-->
+
+    </section>
+    <script src="js/request.js"></script>
+    <script src="js/prestamos.js"></script>
+
+    <script>
+        window.onload = function () {
+            mostrarPrestamos();
+        }
+
+        window.onload = function () {
+            let boton = document.getElementById('btn-editar');
+            const url = new URLSearchParams(window.location.search);
+            cargarDatos(url.get('id'));
+            boton.onclick = () => {
+                modificarPrestamos(url.get('id'));
+            }
+        }        
+    </script>
+    <script>
+        window.onload = function () {
+            mostrarPrestamos(); // Llama a la función para mostrar los préstamos
+
+            let boton = document.getElementById('btn-editar'); // sirveoara el botón para editar
+            const url = new URLSearchParams(window.location.search); // Obtén los parámetros de URL
+            const id = url.get('id');
+
+            if (id) {
+                cargarDatos(id); // Carga los datos si existe un id en la URL
+            }
+
+            // Asigna el evento al botón editar
+            if (boton) {
+                boton.onclick = () => {
+                    modificarPrestamos(id); // Llama a modificar con el id de la URL
+                };
+            }
+        }
+    </script>
+    <!--INICIA FOOTER-->
+<footer>
+    <div class="containerfooter">
+        <div class="mainfooter">
+
+            <div class="imagenfooter"> <img src="IMG/logo-edema2.png" alt=""></div>
+            
+            <div class="infoFooter">
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter1 .png" alt="" >            
+                    <p> callle 125 #12 - 28</p>
+                </div>
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter2.png" alt="" >            
+                    <p>+57 546 30 23</p>
+                </div>
+                <div class="iconofooter">
+                    <img src="IMG/iconofooter3.png" alt="" >            
+                    <p>edemabooks@gmail.com</p>
+                </div>
+              
+            </div>          
+
+            <div class="realizadoPor">                      
+                <a href="https://www.behance.net/sergiosanchez2392" target="_blank"> <img src="IMG/Sergio_avatar2.jpg" alt=""></a>                                
+                <a href="https://youtube.com/@sergiosanchez3707?feature=shared" target="_blank"><img src="IMG/redes__S4.png"></a>                 
+                <a href="https://www.linkedin.com/in/sersan92" target="_blank"><img src="IMG/redes__S7.png"></a>             
+       
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--TERMINA FOOTER-->
+
+</body>
+
+</html>

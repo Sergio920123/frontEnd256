@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="clientes.css">
+    <title>Edema Books</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="IMG/logo-edema2.png" alt="">
+    </div>
+    <header class="navBarContainer">
+        <div class="navegacion">
+            <a href="index.html">Home</a>
+            <a href="libros.html">Libros</a>
+            <a href="prestamos.html">Prestamo</a>
+            <a href="clientes.html">Base de Datos Clientes</a>                 
+            <a href="contacto.html">Contacto</a>  
+        </div>
+</header> 
+
+    <div class="contenedorCabezalLibros">
+        <p class="introSecLibros">En esta sección reposan los registros sagrados de la Orden de los Caballeros del
+            Libro. </p>
+        <p class="TextoIntroLibros">Nobles cruzados de la lectura y valientes protectores de las historias eternas, cada miembro de esta orden es un guardián de la palabra escrita, juramentado a preservar y honrar el poder de los libros. Con escudos de conocimiento y espadas de sabiduría, se comprometen a defender cada página como un tesoro, cada palabra como un legado, y a mantener viva la llama de las historias que nos definen y transforman. Así, en este noble archivo, custodiamos los nombres de aquellos que han jurado lealtad a la Orden y a la causa de los libros.</p>
+        <p class="fraseMotivLibros">“"Los libros son el tesoro más precioso del mundo y la digna herencia de generaciones y naciones."”</p>
+        <p class="autorFrase"> Henry David Thoreau</p>
+    </div>
+    <!--INICIA FORMULARIO BASE DE DATOS CLIENTE-->
+    <div class="contenedorTabla">
+
+        <div class="intruccionesTabla">
+
+            <p class="tituloInstruciones">Instruciones del Formulario</p>
+            <p class="textoInstruciones"> Este formulario está diseñado para consultar, editar y guardar datos de los
+                clientes de EdemaBooks. <br>Te recomendamos seguir las siguientes instrucciones:
+                <br>&nbsp;<b>1</b>&nbsp;Llena los datos del
+                formulario de acuerdo con su título; en el apartado de teléfono, solo podrás incluir
+                números.<br>&nbsp;<b>2</b>&nbsp;Por favor, verifica el correo electrónico.<br>&nbsp;<b>3</b>&nbsp;
+                Utiliza el botón "Guardar" <b>SOLO</b> para añadir
+                un nuevo usuario al sistema.<br>&nbsp;<b>4</b>&nbsp;Si necesitas actualizar la información de un cliente
+                existente, utiliza <b>SOLO</b>
+                el botón "Editar" para guardar los cambios. <br> </p>
+        </div>
+        <form class="contenedorFormulario" action="" onsubmit="" method="POST">
+            <div class="mb-3">
+                <label for="nombres-n">Nombres</label>
+                <input type="text" class="form-control" id="nombres-n" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellidos-a">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos-a" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono-t">Teléfono</label>
+                <input type="number" class="form-control" id="telefono-t" required>
+            </div>
+            <div class="mb-3">
+                <label for="email-e">Email</label>
+                <input type="email" class="form-control" id="email-e" required>
+            </div>
+        </form>
+
+        <form class="contenedorFormulario" action="" onsubmit="" method="POST">
+            <div class="mb-3">
+                <label for="fecha_de_nacimiento-f">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fecha_de_nacimiento-f" required>
+            </div>
+            <div class="mb-3">
+                <label for="genero_literario_favorito-g">Género Literario Favorito</label>
+                <input type="text" class="form-control" id="genero_literario_favorito-g" required>
+            </div>
+            <div class="mb-3">
+                <label for="ciudad-c">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad-c" required>
+            </div>
+            <div class="mb-3">
+                <label for="direccion-d">Dirección</label>
+                <input type="text" class="form-control" id="direccion-d" required>
+            </div>
+        </form>
+
+    </div>
+    <div class="btnAgregaryEditar">
+        <button type="button" class="formularioCientesBtnAgregar" onclick="guardarClientes()">Guardar</button>
+        <button type="button" class="formularioCientesBtnAgregar" id="btn-editar">Editar</button>
+    </div>
+
+
+    <script src="js/request.js"></script> <!-- se LLama las funciones js-->
+    <script src="js/clientes.js"></script>
+
+
+    <!--TERMINA FORMULARIO BASE DE DATOS CLIENTE-->
+
+
+    <section class="container">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th class="colum">Nombres</th>
+                    <th class="colum">Apellidos</th>
+                    <th class="colum">Teléfono</th>
+                    <th class="colum">Email</th>
+                    <th class="colum">Fecha de Nacimiento</th>
+                    <th class="colum">Genero Literario Favorito</th>
+                    <th class="colum">Ciudad</th>
+                    <th class="colum">Direccion</th>
+                    <th class="colum">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="clientes-table">
+
+            </tbody>
+        </table>
+      
+
+    </section>
+    <script src="js/request.js"></script>
+    <script src="js/clientes.js"></script>
+
+
+
+
+
+    <!--INICIA FOOTER-->
+    <footer>
+        <div class="containerfooter">
+            <div class="mainfooter">
+
+                <div class="imagenfooter"> <img src="IMG/logo-edema2.png" alt=""></div>
+
+                <div class="infoFooter">
+                    <div class="iconofooter">
+                        <img src="IMG/iconofooter1 .png" alt="">
+                        <p> callle 125 #12 - 28</p>
+                    </div>
+                    <div class="iconofooter">
+                        <img src="IMG/iconofooter2.png" alt="">
+                        <p>+57 546 30 23</p>
+                    </div>
+                    <div class="iconofooter">
+                        <img src="IMG/iconofooter3.png" alt="">
+                        <p>edemabooks@gmail.com</p>
+                    </div>
+
+                </div>
+
+                <div class="realizadoPor">
+                    <a href="https://www.behance.net/sergiosanchez2392" target="_blank"> <img
+                            src="IMG/Sergio_avatar2.jpg" alt=""></a>
+                    <a href="https://youtube.com/@sergiosanchez3707?feature=shared" target="_blank"><img
+                            src="IMG/redes__S4.png"></a>
+                    <a href="https://www.linkedin.com/in/sersan92" target="_blank"><img src="IMG/redes__S7.png"></a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--TERMINA FOOTER-->
+
+
+    <script>
+        window.onload = function () {
+            mostrarClientes();
+        }
+
+        window.onload = function () {
+            let boton = document.getElementById('btn-editar');
+            const url = new URLSearchParams(window.location.search);
+            cargarDatos(url.get('id'));
+            boton.onclick = () => {
+                modificarClientes(url.get('id'));
+            }
+        }        
+    </script>
+    <script>
+        window.onload = function () {
+            mostrarClientes(); // Llama a la función para mostrar los préstamos
+
+            let boton = document.getElementById('btn-editar'); // sirveoara el botón para editar
+            const url = new URLSearchParams(window.location.search); // Obtén los parámetros de URL
+            const id = url.get('id');
+
+            if (id) {
+                cargarDatos(id); // Carga los datos si existe un id en la URL
+            }
+
+            // Asigna el evento al botón editar
+            if (boton) {
+                boton.onclick = () => {
+                    modificarClientes(id); // Llama a modificar con el id de la URL
+                };
+            }
+        }
+    </script>
+</body>
+
+</html>

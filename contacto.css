@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Quicksand:wght@300..700&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Tangerine:wght@400;700&display=swap');
+:root{
+
+    --clr-black:#1c1c1c;  /* Esta forma de llamar es muy chevere colores muestra en emu colores que esten en esat variable*/
+    --clr-gray:#ececec;
+    --clr-white:#f7f7f7;
+    --clr-otro:#FDE5A9;
+
+    --type-edema:rgb(189, 46, 17);
+    --type-edemegreen :#2c6850;
+    --type-water:#6890f0;
+    --type-grass:#78c850;
+  
+
+ }
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--clr-black); /* Le aplica a todos los elemtos color negro*/
+    font-family: 'rubik',sans-serif;
+}
+body{
+    background-color: var(--clr-white);
+}
+ 
+.logo{
+    display: flex;
+    justify-content: center;
+   
+ 
+    
+}
+.logo img{
+    height: 6rem; 
+    margin: 2rem 0 0 0 ;  
+  
+    
+} 
+
+.navBarContainer{
+    display:flex; 
+    padding: 0.3rem;   
+    justify-content: right; 
+ 
+}
+
+.navegacion a {
+    color:  var(--type-edemegreen);   
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400; 
+    margin: 0 2rem 0 0;
+ 
+ 
+}
+.navegacion a:hover {
+    font-size: 1.3rem;
+    font-weight: 800; 
+    color: var(--type-edema); 
+    text-decoration: none;    
+}
+ 
+.contenedorCabezalLibros{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--type-edema);  
+    height: 417px;  
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;     
+    justify-content: center;
+    align-items: center;    
+    padding: 10rem;
+   
+}
+.introSecLibros{
+    text-align: center;   
+    font-size: 2.3rem;
+    font-weight: 800; 
+    color: var(--clr-otro);
+    margin: 1rem ; 
+}
+.TextoIntroLibros{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800; 
+    color:  var(--clr-white);
+    text-align: justify;
+    margin: 1.5rem 0 1.5rem 0rem;  
+   
+    
+}
+.fraseMotivLibros{
+    font-size: 1rem;
+    font-weight: 600; 
+    color:  var(--clr-otro);  
+    align-self: flex-start;
+   
+   
+}
+.autorFrase{
+    font-size: 0.9rem;
+    font-weight: 600; 
+    color:  var(--clr-white);
+    margin-bottom: 1.5rem;
+    align-self: flex-start;
+} 
+
+ /* inicia el formulario de subscripcion*/ 
+ .contenedorFormulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem;
+    width: 80%;
+ 
+
+ }
+ .formA{   
+ 
+    padding: 1rem;
+    gap: 1rem;
+ } 
+ .formB{   
+ 
+    padding: 1rem;
+    gap: 1rem;
+ } 
+
+
+.formSergio label {   
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:  var(--type-edemegreen);
+ 
+      
+}
+
+.formSergio input {   
+    width: 100%;  
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;  
+    font-weight: 800;  
+    border-radius: 0.3rem;
+   
+}
+.formB input{
+    height: 160px;
+}
+ 
+.botonEnviar{
+    margin-top: 1rem; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+}
+.button{  
+     
+    cursor: pointer;
+    background-color: var(--type-edema);    
+    padding: 0.5rem 8rem ;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--clr-white); 
+    border: none;
+    transition: 0.2s;
+    
+}
+
+.button:hover{ 
+    transform: scale(1.2);
+    font-weight: 800;
+    
+}
+ 
+.imagenSubscripcion{
+   
+    margin-top: 3rem;
+    background-image: url(IMG/libro-img-vector.png);
+    background-size:contain;
+    background-repeat: no-repeat;  
+    background-position: center center;
+ 
+}
+
+/*INICIA FOOTER*/
+.containerfooter{
+    background-color: var(--clr-gray);
+    margin-top: 2rem;  
+ 
+   
+ 
+}
+.mainfooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+
+ 
+} 
+ 
+.imagenfooter img{ 
+    height: 6rem;
+    padding: 0.5rem;
+}
+.infoFooter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 1rem;
+}
+.infoFooter img{
+ width: 3.5rem;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.infoFooter p{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;  
+    font-weight: 400;    
+    color: var(--type-edema);
+   }
+
+   .realizadoPor{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center; 
+    margin:0rem 0rem 0rem 2rem;
+    background-color:#55B2F2;
+    padding:1rem;
+
+   }
+ 
+.realizadoPor p{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;  
+    font-weight: 800;  
+    color: var(--type-edema);
+    
+   
+}
+ 
+ .realizadoPor img{
+    width: 3.9rem;
+    color: var(--type-edema);
+    border-radius: 100vmax;
+    transition: 0.2s;
+  }
+  .realizadoPor img:hover{
+    transform: scale(1.2);
+    background-color: var(--type-edema);
+ 
+  }
+
+  /*TERMINA FOOTER*/
+ 
